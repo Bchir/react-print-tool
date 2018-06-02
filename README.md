@@ -1,0 +1,1 @@
+use react print to easily print html 

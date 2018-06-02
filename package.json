@@ -1,0 +1,22 @@
+{
+  "name": "react-print-tool",
+  "version": "1.0.0",
+  "description": "Print Html contents",
+  "main": "lib/index.js",
+  "author": "Mohamed Amine BCHIR <Bchir.Mohamed.Amine@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "build":"tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^10.1.3",
+    "@types/prop-types": "^15.5.3",
+    "@types/react": ">=1.0.0",
+    "@types/react-dom": ">=1.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=1.0.0",
+    "react-dom": ">=1.0.0"
+  },
+  "bundleDependencies": []
+}
