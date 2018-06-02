@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { PrintFromHtml } from "../components/printFromHtml";
 
-export class PrintHtml {
+export class ReactPrintTool {
 
     private container: HTMLDivElement | undefined;
     /** print react component */
