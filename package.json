@@ -1,8 +1,10 @@
 {
   "name": "react-print-tool",
-  "version": "1.0.3",
+  "version": "0.0.1",
   "description": "Print Html contents",
   "main": "lib/index.js",
+  "repository": "https://github.com/Bchir/react-print-tool",
+
   "author": "Mohamed Amine BCHIR <Bchir.Mohamed.Amine@outlook.com>",
   "license": "MIT",
   "scripts": {
@@ -18,5 +20,8 @@
     "react": ">=1.0.0",
     "react-dom": ">=1.0.0"
   },
-  "bundleDependencies": []
+  "bundleDependencies": [],
+  "keywords": [
+    "React","Print","Print-Component","Typescript","react-print-tool","reactjs"
+  ]
 }
