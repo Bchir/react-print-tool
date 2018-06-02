@@ -1,24 +1,24 @@
-#react-print-tool
+# react-print-tool
 
-provides functions to print react component or html content from a string
+Provides functions to print react component or html content from a string
 
-##Installation
+## Installation
   
-   npm install react-print-tool
+npm install react-print-tool
 
-##Usage
+## Usage
 
 import the react tool object and use one of the fuctions provided
 
-##Example
+## Example
 
 ```Typescript
  import { PrintTool } from "react-print-tool"
 
 //use your own react component
- PrintTool.printFromReactComponent(<ReactComponent/>)
- 
+ PrintTool.printFromReactComponent(<TheBestReactComponent prop={data} />)
+
  //OR use html in a string
- PrintTool.printFromString("<div></div>")
+ PrintTool.printFromString("<div>Hello world</div>")
 
 ```

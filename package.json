@@ -1,6 +1,6 @@
 {
   "name": "react-print-tool",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Print Html contents",
   "main": "lib/index.js",
   "author": "Mohamed Amine BCHIR <Bchir.Mohamed.Amine@outlook.com>",
