@@ -2,7 +2,8 @@
   "name": "react-print-tool",
   "version": "0.0.1",
   "description": "Print Html contents",
-  "main": "lib/index.js",
+  "main": "lib/main.js",
+  "typings": "lib/main.d.ts",
   "repository": "https://github.com/Bchir/react-print-tool",
 
   "author": "Mohamed Amine BCHIR <Bchir.Mohamed.Amine@outlook.com>",
