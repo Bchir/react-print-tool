@@ -1,6 +1,6 @@
 {
   "name": "react-print-tool",
-  "version": "0.0.1",
+  "version": "1.0.4",
   "description": "Print Html contents",
   "main": "lib/main.js",
   "typings": "lib/main.d.ts",
