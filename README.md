@@ -4,11 +4,13 @@ Provides functions to print react component or html content from a string
 
 ## Installation
   
+```
 npm install react-print-tool
+```
 
 ## Usage
 
-import the react tool object and use one of the fuctions provided
+import the react tool object and use one of the functions provided
 
 ## Example
 
