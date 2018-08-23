@@ -1,5 +1,5 @@
 import { BasePrinter, IBasePrinterProps } from "./BasePrinter";
-import React from "../../node_modules/@types/react";
+import React from "react";
 
 export interface IStringPrinterProps extends IBasePrinterProps {
     html: string;

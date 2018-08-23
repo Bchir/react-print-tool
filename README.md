@@ -20,7 +20,10 @@ import the react tool object and use one of the functions provided
 //use your own react component
  PrintTool.printFromReactComponent(<TheBestReactComponent prop={data} />)
 
- //OR use html in a string
+ // use html in a string
  PrintTool.printFromString("<div>Hello world</div>")
+
+// use selector to print existing html element
+ PrintTool.printExistingElement("div.elementClass #elementID")
 
 ```
