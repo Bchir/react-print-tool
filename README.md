@@ -1,6 +1,6 @@
 # react-print-tool
 
-Provides methods to opens print preview for a specific component
+Provides methods to open print preview for a specific component
 
 ## Installation
   
