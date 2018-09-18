@@ -1,7 +1,7 @@
 {
   "name": "react-print-tool",
   "version": "1.0.5",
-  "description": "Print Html contents",
+  "description": "opens print preview for a specific component",
   "main": "lib/main.js",
   "typings": "lib/main.d.ts",
   "repository": "https://github.com/Bchir/react-print-tool",
@@ -23,6 +23,9 @@
   "bundleDependencies": [],
   "keywords": [
     "React",
+    "PrintPreview",
+    "Print-Preview",
+    "Preview",
     "Print",
     "Print-Component",
     "Typescript",

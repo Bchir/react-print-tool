@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { StringPrinter } from "../components/StringPrinter";
 import { ReactComponentPrinter } from "../components/ReactComponentPrinter";
 import { SelectorPrinter } from "../components/SelectorPrinter";
+import { ReactPdfPrinter } from "../components/PdfPrinter";
 
 /**
  * react tool used to open printing preview for a specific content
@@ -29,7 +30,6 @@ export class ReactPrintTool {
     );
   };
 
-  
   /** print html content from string
    * @param html a valid html content as string
    * @throws Error if content is not valid html
@@ -51,6 +51,41 @@ export class ReactPrintTool {
       <SelectorPrinter querySelector={selector} unMount={this._unMount} />,
       this._getContainer()
     );
+  };
+
+  /** print pdf file
+   * @param pdfContent pdf file in base64
+   * @throws Error if pdf Content is not  valid
+   */
+  public printFromPdfFileBase64 = (pdfContent: string): void => {
+    ReactDOM.render(
+      <ReactPdfPrinter pdfContentbase64={pdfContent} unMount={this._unMount} />,
+      this._getContainer() as HTMLDivElement
+    );
+  };
+
+  /** print pdf file
+   * @param pdfContent pdf file in base64
+   * @throws Error if file could not be read
+   */
+  public printFromPdfFile = (pdf: File): Promise<void> => {
+    return this._readFileContentBase64(pdf)
+    .then(content =>
+      this.printFromPdfFileBase64(content)
+    );
+  };
+
+  private _readFileContentBase64 = (pdfFile: File): Promise<string> => {
+    let reader: FileReader = new FileReader();
+    return new Promise<string>((resolve, reject) => {
+      reader.onloadend = () => {
+        resolve(reader.result);
+      };
+      reader.onerror = e => {
+        reject(e);
+      };
+      reader.readAsDataURL(pdfFile);
+    });
   };
 
   private _unMount = (): void => {

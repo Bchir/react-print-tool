@@ -4,17 +4,14 @@ export interface IBasePrinterProps {
   unMount: () => void;
 }
 
-export abstract class BasePrinter<
-  T extends IBasePrinterProps
-> extends React.Component<T> {
-  private _styleTag: HTMLStyleElement;
+export abstract class BasePrinter<T extends IBasePrinterProps> extends React.Component<T> {
 
   constructor(props: T) {
     super(props);
     const style = document.createElement("style");
     style.type = "text/css";
-    style.innerHTML =
-      `@media screen{
+    style.innerHTML = 
+    `@media screen{
         .print-wrapper{
             display:none
         }
@@ -36,15 +33,16 @@ export abstract class BasePrinter<
     this._styleTag = document.head.appendChild(style);
   }
 
+  private _styleTag: HTMLStyleElement;
   protected abstract _renderContent(): JSX.Element;
 
   public render(): JSX.Element {
-    try {
-      return <div className="print-section">{this._renderContent()}</div>;
-    } catch (e) {
-      this._styleTag.remove();
-      throw e;
-    }
+    return <div className="print-section">{this._renderContent()}</div>;
+  }
+
+  public componentDidCatch() {
+    this._styleTag.remove();
+    this.props.unMount();
   }
 
   public componentDidMount(): void {
