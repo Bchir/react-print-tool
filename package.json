@@ -22,12 +22,14 @@
   },
   "bundleDependencies": [],
   "keywords": [
-    "React",
     "PrintPreview",
     "Print-Preview",
-    "Preview",
-    "Print",
     "Print-Component",
+    "Print-pdf",
+    "Print",
+    "pdf",
+    "Preview",
+    "React",
     "Typescript",
     "react-print-tool",
     "reactjs"
