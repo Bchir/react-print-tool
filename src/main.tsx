@@ -1,3 +1,3 @@
 import { ReactPrintTool } from "./lib/ReactPrintTool";
-const PrintTool: ReactPrintTool = new ReactPrintTool();
+const PrintTool = new ReactPrintTool();
 export { PrintTool };

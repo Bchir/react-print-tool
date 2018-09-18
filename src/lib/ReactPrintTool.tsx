@@ -79,7 +79,7 @@ export class ReactPrintTool {
     let reader: FileReader = new FileReader();
     return new Promise<string>((resolve, reject) => {
       reader.onloadend = () => {
-        resolve(reader.result);
+        resolve(reader.result as string);
       };
       reader.onerror = e => {
         reject(e);
