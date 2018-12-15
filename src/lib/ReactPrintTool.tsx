@@ -3,20 +3,19 @@ import ReactDOM from "react-dom";
 import { StringPrinter } from "../components/StringPrinter";
 import { ReactComponentPrinter } from "../components/ReactComponentPrinter";
 import { SelectorPrinter } from "../components/SelectorPrinter";
-import { ReactPdfPrinter } from "../components/PdfPrinter";
 
 /**
  * react tool used to open printing preview for a specific content
  */
 export class ReactPrintTool {
-  private container: HTMLDivElement | undefined;
+  private _container: HTMLDivElement | undefined;
   private _getContainer = (): HTMLDivElement => {
-    if (this.container === undefined) {
+    if (this._container === undefined) {
       const element: HTMLDivElement = document.createElement("div");
       element.className = "print-wrapper";
-      this.container = document.body.appendChild(element);
+      this._container = document.body.appendChild(element);
     }
-    return this.container as HTMLDivElement;
+    return this._container as HTMLDivElement;
   };
 
   /** print react component
@@ -53,44 +52,9 @@ export class ReactPrintTool {
     );
   };
 
-  /** print pdf file
-   * @param pdfContent pdf file in base64
-   * @throws Error if pdf Content is not  valid
-   */
-  public printFromPdfFileBase64 = (pdfContent: string): void => {
-    ReactDOM.render(
-      <ReactPdfPrinter pdfContentbase64={pdfContent} unMount={this._unMount} />,
-      this._getContainer() as HTMLDivElement
-    );
-  };
-
-  /** print pdf file
-   * @param pdfContent pdf file in base64
-   * @throws Error if file could not be read
-   */
-  public printFromPdfFile = (pdf: File): Promise<void> => {
-    return this._readFileContentBase64(pdf)
-    .then(content =>
-      this.printFromPdfFileBase64(content)
-    );
-  };
-
-  private _readFileContentBase64 = (pdfFile: File): Promise<string> => {
-    let reader: FileReader = new FileReader();
-    return new Promise<string>((resolve, reject) => {
-      reader.onloadend = () => {
-        resolve(reader.result as string);
-      };
-      reader.onerror = e => {
-        reject(e);
-      };
-      reader.readAsDataURL(pdfFile);
-    });
-  };
-
   private _unMount = (): void => {
-    if (this.container !== undefined) {
-      ReactDOM.unmountComponentAtNode(this.container);
+    if (this._container !== undefined) {
+      ReactDOM.unmountComponentAtNode(this._container);
     }
   };
 }

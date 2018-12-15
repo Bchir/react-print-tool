@@ -1,6 +1,6 @@
 {
   "name": "react-print-tool",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Provides methods to open print preview for a specific component",
   "main": "lib/main.js",
   "typings": "lib/main.d.ts",
@@ -25,13 +25,12 @@
     "PrintPreview",
     "Print-Preview",
     "Print-Component",
-    "Print-pdf",
     "Print",
-    "pdf",
     "Preview",
     "React",
     "Typescript",
     "react-print-tool",
-    "reactjs"
+    "reactjs",
+    "print-element"
   ]
 }

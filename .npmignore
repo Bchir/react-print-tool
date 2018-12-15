@@ -1,7 +1,7 @@
-.\node_modules
-.\src
-.\tsconfig.json
-.\webpack.config.js
-.\tslint.json
-.\.gitignore
-.\react-print-tool-0.0.1.tgz
+node_modules
+src
+tsconfig.json
+webpack.config.js
+tslint.json
+.gitignore
+*.tgz
