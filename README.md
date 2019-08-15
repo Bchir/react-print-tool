@@ -3,12 +3,44 @@
 Provides methods to open print preview for a specific component
 
 ## Installation
-  
+
+if you're using react version >= 16.8.0
+
 ```
-npm install react-print-tool
+npm install react-print-tool@latest
+```
+
+else
+
+```
+npm install react-print-tool@2.0.0
 ```
 
 ## Usage
+
+### Version 3.0.0
+
+
+```Typescript
+
+import {
+  printComponent,
+  printExistingElement,
+  printHtml
+} from "react-print-tool";
+
+//use your own react component
+await printComponent(<TheBestReactComponent prop={data} />);
+
+// use html in a string
+await printHtml("<div>Hello world</div>");
+
+// use selector to print an existing html element
+await printExistingElement("div.elementClass #elementID");
+
+```
+
+### Version 2.0.0
 
 Import the react tool object and use one of the provided methods
 
