@@ -2,6 +2,9 @@
 
 Provides methods to open print preview for a specific component
 
+[![NPM](https://nodei.co/npm/react-print-tool.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-print-tool/)
+
+[![NPM](https://nodei.co/npm-dl/react-print-tool.png)](https://nodei.co/npm/react-print-tool/)
 ## Installation
 
 if you're using react version >= 16.8.0
